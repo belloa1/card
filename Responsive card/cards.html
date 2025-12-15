@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Card UI</title>
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family: Inter, Arial, sans-serif;
+    }
+
+    body{
+      background:#f3f4f6;
+      min-height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      padding:40px;
+    }
+
+    .cards{
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap:16px; /* REDUCED GAP */
+      max-width:820px; /* TIGHTER CONTAINER */
+      width:100%;
+    }
+
+    .card{
+      position:relative;
+      width:240px;
+      height:400px;
+      border-radius:18px;
+      overflow:hidden;
+      box-shadow:0 10px 25px rgba(0,0,0,0.08);
+      cursor:pointer;
+    }
+
+    /* FULL IMAGE BACKGROUND */
+    .card-image{
+      position:absolute;
+      inset:0;
+      background-size:cover;
+      background-position:center;
+      transition:opacity .3s ease;
+      z-index:1;
+    }
+
+    /* IMAGE TURNS WHITE ON HOVER */
+    .card:hover .card-image{
+      opacity:0;
+    }
+
+    .card::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:#ffffff;
+      opacity:0;
+      transition:opacity .3s ease;
+      z-index:1;
+    }
+
+    .card:hover::before{
+      opacity:1;
+    }
+
+    /* CONTENT STAYS UNCHANGED */
+    .card-content{
+      position:relative;
+      z-index:2;
+      height:100%;
+      padding:20px;
+      display:flex;
+      flex-direction:column;
+      justify-content:flex-end;
+      gap:10px;
+      background:linear-gradient(to top, rgba(0,0,0,0.65), rgba(0,0,0,0));
+    }
+
+    .date{
+      font-size:13px;
+      color:#e5e7eb;
+      font-weight:500;
+    }
+
+    .title{
+      font-size:20px;
+      font-weight:700;
+      color:#ffffff;
+      line-height:1.3;
+    }
+
+    .desc{
+      font-size:14px;
+      color:#e5e7eb;
+      line-height:1.6;
+    }
+
+    .card-footer{
+      margin-top:8px;
+    }
+
+    .tag{
+      display:inline-block;
+      background:rgba(255,255,255,0.9);
+      color:#111827;
+      padding:6px 12px;
+      font-size:12px;
+      border-radius:999px;
+      font-weight:600;
+    }
+
+    /* IMAGES */
+    .img-1{ background-image:url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f'); }
+    .img-2{ background-image:url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee'); }
+    .img-3{ background-image:url('https://images.unsplash.com/photo-1519389950473-47ba0277781c'); }
+
+  </style>
+</head>
+<body>
+
+  <div class="cards">
+
+    <div class="card">
+      <div class="card-image img-1"></div>
+      <div class="card-content">
+        <span class="date">22 July 2022</span>
+        <h2 class="title">Modern Card Design</h2>
+        <p class="desc">A clean and minimal card layout built using pure HTML and CSS.</p>
+        <div class="card-footer">
+          <span class="tag">CSS</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-image img-2"></div>
+      <div class="card-content">
+        <span class="date">18 Aug 2022</span>
+        <h2 class="title">Precise Layout</h2>
+        <p class="desc">Responsive grid with balanced spacing and proportions.</p>
+        <div class="card-footer">
+          <span class="tag">CSS</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-image img-3"></div>
+      <div class="card-content">
+        <span class="date">02 Sep 2022</span>
+        <h2 class="title">Responsive Cards</h2>
+        <p class="desc">Adapts smoothly across mobile, tablet, and desktop.</p>
+        <div class="card-footer">
+          <span class="tag">CSS</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>
