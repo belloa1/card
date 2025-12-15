@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    
+}
+
+
+
+.container {
+    display: grid;
+    grid-row: auto;
+    gap: 40px;
+    justify-content: center;
+           grid-template-columns: repeat(3, 1fr);
+grid-template-rows: 1fr;
+grid-column-gap: 20px;
+
+    
+}
+
+
+
+/* ---------------- CARD ---------------- */
+.card {
+    width: 270px;
+    height: 380px;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 18px;
+    padding: 25px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    position: relative;
+    background-image: url(card1.jpg);
+    background-position: center;
+    background-size: contain;
+       
+}
+.container .card:nth-child(3) {
+    background-image: url(card2.jpg);
+    background-size: contain;
+    background-position: center;
+}
+
+.card.dark {
+    background: rgba(25, 25, 25, 0.85);
+    color: white;
+    background-image: url(card3.jpg);
+    background-size: contain;
+}
+
+.date {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    font-size: 13px;
+    color: #777;
+}
+
+.card.dark .date {
+    color: #ccc;
+}
+
+.card h2 {
+    margin-top: 50px;
+    font-size: 25px;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 15px;
+}
+
+.card p {
+    margin: 10px 0;
+    font-size: 15px;
+    opacity: 0.9;
+    line-height: 1.5;
+    flex-grow: 1;
+}
+
+/* tag */
+.tag {
+    background: #ddd;
+    background-size: 40px;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: bold;
+   
+    margin-top: auto;
+}
+
+.card.dark .tag {
+    background: #333;
+    color: white;
+    display: flexbox;
+}
+.card {
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+/* Responsive Design */
+
+    
+    .number {
+        text-align: center;
+        width: 100%;
+    }
