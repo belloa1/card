@@ -1,4 +1,4 @@
-/* Full Background */
+
 body {
     margin: 0;
     padding: 0;
@@ -10,7 +10,7 @@ body {
     align-items: center;
 }
 
-/* White Login Card */
+
 .login-card {
     background: #ffffff;
     width: 350px;
@@ -20,7 +20,7 @@ body {
     text-align: center;
 }
 
-/* Title */
+
 .login-title {
     margin: 0;
     padding-bottom: 20px;
@@ -29,7 +29,7 @@ body {
     border-bottom: 1px solid #ddd;
 }
 
-/* Input Fields */
+
 .input-line {
     width: 100%;
     border: none;
@@ -44,7 +44,7 @@ body {
     border-bottom: 1px solid #000;
 }
 
-/* Forget Password */
+
 .forgot-link {
     display: block;
     text-align: left;
@@ -58,7 +58,7 @@ body {
     color: #000;
 }
 
-/* Login Button */
+
 .login-button {
     width: 100%;
     margin-top: 25px;
@@ -75,7 +75,7 @@ body {
     background: #e9e9e9;
 }
 
-/* Signup Text */
+
 .member-text {
     margin-top: 20px;
     font-size: 14px;
@@ -91,3 +91,4 @@ body {
 .signup-link:hover {
     text-decoration: underline;
 }
+
