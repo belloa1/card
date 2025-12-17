@@ -10,8 +10,6 @@ body {
     overflow-x: hidden;
 }
 
-/* ---------------- HEADER ---------------- */
-
 header {
     width: 100%;
     padding: 15px 50px;
@@ -31,8 +29,6 @@ nav a {
     font-size: 14px;
     color: #333;
 }
-
-/* ---------------- HERO SECTION ---------------- */
 
 .hero {
     width: 100%;
@@ -71,8 +67,6 @@ nav a {
     width: 85%;
 }
 
-/* ---------------- BUTTON ---------------- */
-
 .btn {
     background: #00754a;
     padding: 10px 26px;
@@ -88,8 +82,6 @@ nav a {
     background: #055f3a;
 }
 
-/* ---------------- MAIN IMAGE ---------------- */
-
 .main-img {
     width: 50%;
     display: flex;
@@ -102,7 +94,7 @@ nav a {
     z-index: 2;
 }
 
-/* Green half circle */
+
 .main-img::before {
     content: "";
     width: 520px;
@@ -114,8 +106,6 @@ nav a {
     top: -60px;
     z-index: 0;
 }
-
-/* ---------------- SMALL DRINKS ---------------- */
 
 .small-drinks {
     display: flex;
@@ -133,3 +123,4 @@ nav a {
 .small-drinks img:hover {
     transform: translateY(-8px);
 }
+
